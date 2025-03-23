@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSzulim on UZ</title>
+    <meta name="description" content="RSzulim on UZ">
+    <link rel="stylesheet" href="mycss.css">
+    <style>
+        body {
+            display: flex;
+            /* This sets the body to use flexbox layout */
+            flex-direction: column;
+            /* This arranges the flex items (children of body) in a column */
+            min-height: 100vh;
+            /* This ensures the body takes at least the full height of the viewport */
+            margin: 0;
+            /* This removes the default margin around the body */
+        }
+
+        #content {
+            flex: 1;
+            /* This makes the content area expand to fill the available space */
+            display: flex;
+            /* This sets the content to use flexbox layout */
+            flex-wrap: wrap;
+            /* This allows the items to wrap to the next line */
+            justify-content: space-between;
+            /* This distributes the divs evenly */
+        }
+
+        #content,
+        #head,
+        #foot {
+            border: 1px solid black;
+            background-color: lightblue;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="head">
+        <h1>Flex full screen</h1>
+    </div>
+
+    <div id="content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto tenetur impedit sit explicabo officia
+        reiciendis distinctio adipisci error dolor suscipit, animi libero nemo, sequi unde nobis maiores facere ratione
+        provident.
+        Obcaecati accusamus vel iure illo nam architecto doloremque libero laboriosam labore, expedita sequi, minima
+        consequuntur delectus hic. Facilis quo nesciunt quas inventore nemo tenetur deserunt quae, perferendis repellat
+        porro dolorum.
+        Cumque fugit debitis doloremque ad distinctio expedita dolores ea. Modi, autem! At delectus assumenda qui,
+        impedit sed vitae nulla totam perferendis sapiente, adipisci nam, cumque magnam nobis itaque praesentium.
+        Magnam.
+        Aliquid in quisquam totam iste tempore fugiat praesentium? Consequatur, deleniti officia. Atque libero porro
+        sint alias unde exercitationem placeat id debitis veritatis rerum, optio dolores consequatur? Nam quod rerum
+        eum!
+        Laboriosam ad architecto accusamus sed facere numquam! Porro eum vitae minima? Asperiores molestias nihil illo
+        atque suscipit soluta repudiandae expedita hic pariatur rerum tenetur dolorem obcaecati excepturi, sunt ipsum
+        similique.
+    </div>
+    <div id="foot">
+        RS2025
+    </div>
+</body>
+
+</html>
