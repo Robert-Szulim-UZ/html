@@ -8,55 +8,55 @@
     <link rel="stylesheet" href="mycss.css">
     <style>
         body {
-            display: flex; /* Ustawia układ flexbox dla elementu body */
-            flex-direction: column; /* Ustawia kierunek ułożenia elementów flex w kolumnie */
-            min-height: 100vh; /* Zapewnia, że body zajmuje co najmniej pełną wysokość widoku */
-            margin: 0; /* Usuwa domyślne marginesy wokół body */
+            display: flex; /* This sets the body to use flexbox layout */
+            flex-direction: column; /* This arranges the flex items (children of body) in a column */
+            min-height: 100vh; /* This ensures the body takes at least the full height of the viewport */
+            margin: 0; /* This removes the default margin around the body */
         }
         #content {
-            flex: 1; /* Sprawia, że obszar content rozszerza się, aby wypełnić dostępną przestrzeń */
-            display: flex; /* Ustawia układ flexbox dla elementu content */
+            flex: 1; /* This makes the content area expand to fill the available space */
+            display: flex; /* This sets the content to use flexbox layout */
 
         }
       
         .box{
-            margin: 5px; /* Dodaje odstęp między boxami */
-            border: 1px solid #000; /* Dodaje obramowanie do boxów dla widoczności */
+            margin: 5px; /* This adds some space between the boxes */
+            border: 1px solid #000; /* This adds a border to the boxes for visibility */
             padding:10px;            
             background-color: aliceblue;  
-            box-sizing: border-box; /* Zapewnia, że padding i border są wliczane w całkowitą szerokość i wysokość elementu */          
+            box-sizing: border-box; /* This ensures padding and border are included in the element's total width and height */          
         }
 
         .box1 {
-            flex: 0 0 48%; /* Sprawia, że div 1 zajmuje około połowy szerokości */
+            flex: 0 0 48%; /* This makes div 1 take up approximately half the width */
         }
         .box2, .box3 {
-            flex: 1; /* Sprawia, że div 2 i div 3 dzielą pozostałą wysokość równo */
+            flex: 1; /* This makes div 2 and div 3 share the remaining height equally */
         }
         #side-content {
             display: flex;
-            flex-direction: column; /* Ustawia kierunek ułożenia elementów flex w kolumnie */
+            flex-direction: column;
             flex: 1;
         }
 
         @media screen and (max-width: 1000px) {
             .box1, .box2, .box3 {
-                flex: 1 0 30%; /* Sprawia, że każdy box zajmuje pełną szerokość na małych ekranach */
-                margin: 5px; /* Dostosowuje margines dla małych ekranów */
+                flex: 1 0 30%; /* This makes each box take up the full width on small screens */
+                margin: 5px; /* Adjust the margin for small screens */
             }
         }
 
         @media screen and (max-width: 600px) {
             #content {
-                flex-direction: column; /* Ustawia kierunek ułożenia elementów flex w kolumnie na bardzo małych ekranach */
+                flex-direction: column;
             }           
         }
 
         #head, #content, #foot {
-            border: 1px solid black; /* Dodaje obramowanie do elementów head, content i foot */
-            background-color: lightblue; /* Ustawia kolor tła na lightblue */
-            padding: 10px; /* Dodaje wewnętrzny odstęp wewnątrz elementów */
-            margin: 10px; /* Dodaje margines wokół elementów */
+            border: 1px solid black;
+            background-color: lightblue;
+            padding: 10px;
+            margin: 10px;
         }
     </style>
 </head>
