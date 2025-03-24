@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSzulim on UZ</title>
+    <meta name="description" content="RSzulim on UZ">
+    <link rel="stylesheet" href="mycss.css">
+    <style>
+        body {
+            display: flex; /* This sets the body to use flexbox layout */
+            flex-direction: column; /* This arranges the flex items (children of body) in a column */
+            min-height: 100vh; /* This ensures the body takes at least the full height of the viewport */
+            margin: 0; /* This removes the default margin around the body */
+        }
+        #content {
+            flex: 1; /* This makes the content area expand to fill the available space */
+            display: flex; /* This sets the content to use flexbox layout */
+            flex-wrap: wrap; /* This allows the items to wrap to the next line */
+            justify-content: space-between; /* This distributes the divs evenly */
+        }
+      
+        .box{
+            flex: 0 0 48%; /* This makes each box take up approximately half the width, with some space for margins */
+            margin: 1%; /* This adds some space between the boxes */
+            border: 1px solid #000; /* This adds a border to the boxes for visibility */
+            padding:10px;            
+            background-color: aliceblue;  
+            box-sizing: border-box; /* This ensures padding and border are included in the element's total width and height */          
+        }
+
+        @media screen and (max-width: 1000px) {
+            .box {
+                flex: 1 0 48%; /* This makes each box take up the full width on small screens */
+                margin: 1%; /* Adjust the margin for small screens */
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .box {
+                flex: 1 0 98%; /* This makes each box take up the full width on small screens */
+                margin: 5px; /* Adjust the margin for small screens */
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="head">
+        <h1>Flex 2 wiersze 2 div</h1>
+    </div>
+
+    <div id="content">
+        <div class="box">Div 1</div>
+        <div class="box">Div 2</div>
+        <div class="box">Div 3</div>
+        <div class="box">Div 4</div>
+    </div>
+    <div id="foot">
+        RS2025
+    </div>
+</body>
+</html>
