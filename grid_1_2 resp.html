@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSzulim on UZ</title>
+    <meta name="description" content="RSzulim on UZ">
+    <link rel="stylesheet" href="mycss.css">
+    <style>
+        body {
+            display: grid; /* Ustawia układ CSS Grid dla body */
+            grid-template-rows: auto 1fr auto; /* Definiuje wiersze: nagłówek, content, stopka */
+            grid-template-columns: 1fr; /* Jedna kolumna na pełną szerokość */
+            min-height: 100vh; /* Zapewnia, że body zajmuje co najmniej pełną wysokość widoku */
+            margin: 0; /* Usuwa domyślne marginesy */
+        }
+        #head {
+            grid-row: 1; /* Umieszcza head w pierwszym wierszu */
+            grid-column: 1; /* Rozciąga head na całą szerokość */
+        }
+        #content {
+            grid-row: 2; /* Umieszcza content w drugim wierszu */
+            grid-column: 1; /* Rozciąga content na całą szerokość */
+            display: grid; /* Ustawia układ CSS Grid dla content */
+            grid-template-columns: 1fr 1fr; /* Dzieli content na dwie kolumny */
+            gap: 10px; /* Dodaje odstęp między kolumnami */
+        }
+        .box1 {
+            grid-column: 1; /* Umieszcza Div 1 w pierwszej kolumnie */
+            grid-row: 1; /* Umieszcza Div 1 w pierwszym wierszu */
+            background-color: aliceblue; /* Kolor tła dla widoczności */
+            padding: 10px;
+            border: 1px solid #000;
+        }
+        #side-content {
+            grid-column: 2; /* Umieszcza side-content w drugiej kolumnie */
+            grid-row: 1; /* Umieszcza side-content w pierwszym wierszu */
+            display: grid; /* Ustawia układ CSS Grid dla side-content */
+            grid-template-rows: 1fr 1fr; /* Dzieli side-content na dwa równe wiersze */
+            gap: 10px; /* Dodaje odstęp między wierszami */
+        }
+        .box2, .box3 {
+            background-color: aliceblue; /* Kolor tła dla widoczności */
+            padding: 10px;
+            border: 1px solid #000;
+            grid-row: span 1; /* Każdy box zajmuje jeden wiersz */
+            align-self: stretch; /* Zapewnia, że boxy wypełniają swoje wiersze */
+        }
+        #foot {
+            grid-row: 3; /* Umieszcza foot w trzecim wierszu */
+            grid-column: 1; /* Rozciąga foot na całą szerokość */
+        }
+        #head, #content, #foot {
+            border: 1px solid black;
+            background-color: lightblue;
+            padding: 10px;
+            margin: 10px;
+        }
+        @media screen and (max-width: 600px) {
+            body {
+                grid-template-rows: auto auto auto auto; /* Każdy element w osobnym wierszu */
+                grid-template-columns: 1fr; /* Jedna kolumna na pełną szerokość */
+            }
+            #content {
+                display: block; /* Wyłącza układ grid dla content */
+            }
+            .box1, #side-content {
+                width: 100%; /* Elementy zajmują pełną szerokość */
+                margin-bottom: 10px; /* Dodaje odstęp między elementami */
+            }
+            #side-content {
+                display: block; /* Wyłącza układ grid dla side-content */
+            }
+            .box2, .box3 {
+                width: 100%; /* Elementy zajmują pełną szerokość */
+                margin-bottom: 10px; /* Dodaje odstęp między elementami */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="head">
+        <h1>Grid 1 wiersz 1 i 2 div - responsive</h1>
+    </div>
+    <div id="content">
+        <div class="box box1">Div 1</div>
+        <div id="side-content">
+            <div class="box box2">Div 2</div>
+            <div class="box box3">Div 3</div>
+        </div>
+    </div>
+    <div id="foot">
+        RS2025
+    </div>
+</body>
+</html>
