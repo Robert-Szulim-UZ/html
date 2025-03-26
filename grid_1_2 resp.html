@@ -58,21 +58,18 @@
         }
         @media screen and (max-width: 600px) {
             body {
-                grid-template-rows: auto auto auto auto; /* Każdy element w osobnym wierszu */
-                grid-template-columns: 1fr; /* Jedna kolumna na pełną szerokość */
+                display: block; /* Wyłącza układ grid dla side-content */
             }
             #content {
                 display: block; /* Wyłącza układ grid dla content */
             }
             .box1, #side-content {
-                width: 100%; /* Elementy zajmują pełną szerokość */
                 margin-bottom: 10px; /* Dodaje odstęp między elementami */
             }
             #side-content {
                 display: block; /* Wyłącza układ grid dla side-content */
             }
             .box2, .box3 {
-                width: 100%; /* Elementy zajmują pełną szerokość */
                 margin-bottom: 10px; /* Dodaje odstęp między elementami */
             }
         }

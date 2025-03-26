@@ -16,40 +16,31 @@
         #content {
             flex: 1; /* This makes the content area expand to fill the available space */
             display: flex; /* This sets the content to use flexbox layout */
-
+            flex-wrap: wrap; /* This allows the items to wrap to the next line */
+            justify-content: space-between; /* This distributes the divs evenly */
         }
       
         .box{
-            margin: 5px; /* This adds some space between the boxes */
+            flex: 0 0 48%; /* This makes each box take up approximately half the width, with some space for margins */
+            margin: 1%; /* This adds some space between the boxes */
             border: 1px solid #000; /* This adds a border to the boxes for visibility */
             padding:10px;            
             background-color: aliceblue;  
             box-sizing: border-box; /* This ensures padding and border are included in the element's total width and height */          
         }
 
-        .box1 {
-            flex: 0 0 48%; /* This makes div 1 take up approximately half the width */
-        }
-        .box2, .box3 {
-            flex: 1; /* This makes div 2 and div 3 share the remaining height equally */
-        }
-        #side-content {
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-        }
-
         @media screen and (max-width: 1000px) {
-            .box1, .box2, .box3 {
-                flex: 1 0 30%; /* This makes each box take up the full width on small screens */
-                margin: 5px; /* Adjust the margin for small screens */
+            .box {
+                flex: 1 0 48%; /* This makes each box take up the full width on small screens */
+                margin: 1%; /* Adjust the margin for small screens */
             }
         }
 
         @media screen and (max-width: 600px) {
-            #content {
-                flex-direction: column;
-            }           
+            .box {
+                flex: 1 0 98%; /* This makes each box take up the full width on small screens */
+                margin: 5px; /* Adjust the margin for small screens */
+            }
         }
 
         #head, #content, #foot {
@@ -62,15 +53,13 @@
 </head>
 <body>
     <div id="head">
-        <h1>Flex 1 wiersz 1 i 2 div</h1>
+        <h1>Flex 1 wiersze 2 div</h1>
     </div>
 
     <div id="content">
-        <div class="box box1">Div 1</div>
-        <div id="side-content">
-            <div class="box box2">Div 2</div>
-            <div class="box box3">Div 3</div>
-        </div>
+        <div class="box">Div 1</div>
+        <div class="box">Div 2</div>
+        <div class="box">Div 3</div>        
     </div>
     <div id="foot">
         RS2025
