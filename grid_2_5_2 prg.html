@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: grid;
+            /* Ustawia układ CSS Grid dla body */
+            grid-template-rows: auto 1fr auto;
+            /* Definiuje wiersze: nagłówek, content, stopka */
+            grid-template-columns: 1fr;
+            /* Jedna kolumna na pełną szerokość */
+            min-height: 100vh;
+            /* Zapewnia, że body zajmuje co najmniej pełną wysokość widoku */
+            margin: 0;
+            /* Usuwa domyślne marginesy */
+        }
+
+        #head {
+            grid-row: 1;
+            /* Umieszcza head w pierwszym wierszu */
+            grid-column: 1;
+            /* Rozciąga head na całą szerokość */
+        }
+
+        #content {
+            grid-row: 2;
+            /* Umieszcza content w drugim wierszu */
+            grid-column: 1;
+            /* Rozciąga content na całą szerokość */
+            display: grid;
+            /* Ustawia układ CSS Grid dla content */
+            gap: 5px;
+            /* Dodaje odstęp między kolumnami */
+        }
+
+        #foot {
+            grid-row: 3;
+            /* Umieszcza foot w trzecim wierszu */
+            grid-column: 1;
+            /* Rozciąga foot na całą szerokość */
+        }
+
+        .box {
+            background-color: aliceblue;
+            /* Ustawia kolor tła dla widoczności */
+            padding: 10px;
+            /* Dodaje wewnętrzny odstęp */
+            border: 1px solid #000;
+            /* Dodaje obramowanie dla widoczności */
+            margin: 10px;
+            /* Dodaje odstęp wokół elementu */
+            display: grid;
+            grid-template-rows: auto 1fr 1fr; /* divy w srodku po polowie wysokosci */        
+            
+        }
+
+        .box1 {
+            grid-column: 1;
+            /* Umieszcza element w pierwszej kolumnie */
+        }
+
+        .box2 {
+            grid-column: 2;
+            /* Umieszcza element w drugiej kolumnie */
+        }
+
+        .box3 {
+            grid-column: 3;
+            /* Umieszcza element w trzeciej kolumnie */
+        }
+
+        .box4 {
+            grid-column: 4;
+            /* Umieszcza element w czwartej kolumnie */
+        }
+
+        .box5 {
+            grid-column: 5;
+            /* Umieszcza element w piątej kolumnie */
+        }
+
+        .box6 {
+            grid-column: 1;
+            /* Umieszcza element w pierwszej kolumnie */
+        }
+
+        .box7 {
+            grid-column: 2;
+            /* Umieszcza element w pierwszej kolumnie */
+        }
+
+        .box8 {
+            grid-column: 3;
+            /* Umieszcza element w trzeciej kolumnie */
+        }
+
+        .box9 {
+            grid-column: 4;
+            /* Umieszcza element w czwartej kolumnie */
+        }
+
+        .box10 {
+            grid-column: 5;
+            /* Umieszcza element w piątej kolumnie */
+        }
+
+        .boxI, .boxU {
+            display: grid; /* Ustawia układ CSS Grid dla elementu */
+            place-items: center; /* Wyrównuje zawartość w poziomie i pionie na środek */
+            width:calc(100% - 22px);
+            border:1px solid black;
+            padding:5px;
+            margin:5px;
+            font-size: 4vh;
+        }
+        .boxU{
+            background-color: lightgreen;
+        }
+        .boxI {
+            background-color: lightyellow;
+        }
+
+        #head,
+        #content,
+        #foot {
+            border: 1px solid black;
+            /* Dodaje obramowanie dla widoczności */
+            background-color: lightblue;
+            /* Ustawia kolor tła */
+            padding: 10px;
+            /* Dodaje wewnętrzny odstęp */
+            margin: 10px;
+            /* Dodaje odstęp wokół elementu */
+        }
+
+        @media screen and (max-width: 1000px) {
+            .box1 {
+                grid-column: 1;
+                /* Umieszcza element w pierwszej kolumnie */
+            }
+
+            .box2 {
+                grid-column: 2;
+                /* Umieszcza element w drugiej kolumnie */
+            }
+
+            .box3 {
+                grid-column: 1;
+                /* Umieszcza element w trzeciej kolumnie */
+                grid-row: 2;
+            }
+
+            .box4 {
+                grid-column: 2;
+                /* Umieszcza element w czwartej kolumnie */
+                grid-row: 2;
+            }
+
+            .box5 {
+                grid-column: 1;
+                /* Umieszcza element w piątej kolumnie */
+                grid-row: 3;
+            }
+
+            .box6 {
+                grid-column: 2;
+                /* Umieszcza element w pierwszej kolumnie */
+                grid-row: 3;
+            }
+
+            .box7 {
+                grid-column: 1;
+                /* Umieszcza element w drugiej kolumnie */
+                grid-row: 4;
+            }
+
+            .box8 {
+                grid-column: 2;
+                /* Umieszcza element w trzeciej kolumnie */
+                grid-row: 4;
+            }
+
+            .box9 {
+                grid-column: 1;
+                /* Umieszcza element w czwartej kolumnie */
+                grid-row: 5;
+            }
+
+            .box10 {
+                grid-column: 2;
+                /* Umieszcza element w piątej kolumnie */
+                grid-row: 5;
+            }
+
+        }
+
+        @media screen and (max-width: 600px) {
+            body {
+                display: block;
+                /* Wyłącza układ grid dla body na małych ekranach */
+            }
+
+            #content {
+                display: block;
+                /* Wyłącza układ grid dla content na małych ekranach */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="head">
+        <h1>Grid 2 wiersze 5 div</h1>
+    </div>
+
+    <div id="content">
+        <div class="box box1">Div 1</div>
+        <div class="box box2">Div 2</div>
+        <div class="box box3">Div 3</div>
+        <div class="box box4">Div 4</div>
+        <div class="box box5">Div 5</div>
+        <div class="box box6">Div 1</div>
+        <div class="box box7">Div 2</div>
+        <div class="box box8">Div 3</div>
+        <div class="box box9">Div 4</div>
+        <div class="box box10">Div 5</div>
+    </div>
+    <div id="foot">
+        RS2025
+    </div>
+
+    <script>
+        var divs = document.querySelectorAll('.box');
+        divs.forEach(function (div) {
+            div.innerHTML += `<div class="boxU">U</div>`;
+            div.innerHTML += `<div class="boxI">I</div>`;
+        });
+
+        dane = () => {
+            var divs = document.querySelectorAll('.box');
+            divs.forEach(function (div) {
+                div.getElementsByClassName('boxU')[0].innerText = Math.floor(Math.random() * 100) + 1;
+                div.getElementsByClassName('boxI')[0].innerText = Math.floor(Math.random() * 100) + 1;
+            });
+        }
+
+        document.getElementById('head').addEventListener('click', dane);
+    </script>
+</body>
+
+</html>

@@ -34,14 +34,6 @@
             margin: 10px; /* Dodaje odstęp wokół elementu */
         }
 
-        .boxR1 {
-            grid-row: 1; /* Umieszcza element w pierwszym wierszu */
-        }
-
-        .boxR2{
-            grid-row: 2; /* Umieszcza element w drugim wierszu */
-        }
-
         .box1 {
             grid-column: 1; /* Umieszcza element w pierwszej kolumnie */
         }
@@ -61,6 +53,26 @@
         .box5 {
             grid-column: 5; /* Umieszcza element w piątej kolumnie */
         }
+
+        .box11 {
+            grid-column: 1; /* Umieszcza element w pierwszej kolumnie */
+        }
+
+        .box12 {
+            grid-column: 2; /* Umieszcza element w drugiej kolumnie */
+        }
+
+        .box13 {
+            grid-column: 3; /* Umieszcza element w trzeciej kolumnie */
+        }
+
+        .box14 {
+            grid-column: 4; /* Umieszcza element w czwartej kolumnie */
+        }
+
+        .box15 {
+            grid-column: 5; /* Umieszcza element w piątej kolumnie */
+        }
         
         #head, #content, #foot {
             border: 1px solid black; /* Dodaje obramowanie dla widoczności */
@@ -68,6 +80,58 @@
             padding: 10px; /* Dodaje wewnętrzny odstęp */
             margin: 10px; /* Dodaje odstęp wokół elementu */
         }
+
+        @media screen and (max-width: 1000px) {
+        .box1 {
+            grid-column: 1; /* Umieszcza element w pierwszej kolumnie */
+        }
+
+        .box2 {
+            grid-column: 2; /* Umieszcza element w drugiej kolumnie */
+        }
+
+        .box3 {
+            grid-column: 1; /* Umieszcza element w trzeciej kolumnie */
+            grid-row: 2;
+        }
+
+        .box4 {
+            grid-column: 2; /* Umieszcza element w czwartej kolumnie */
+            grid-row: 2;
+        }
+
+        .box5 {
+            grid-column: 1; /* Umieszcza element w piątej kolumnie */
+            grid-row: 3;
+        }
+
+        .box11 {
+            grid-column: 2; /* Umieszcza element w pierwszej kolumnie */
+            grid-row: 3;
+        }
+
+        .box12 {
+            grid-column: 1; /* Umieszcza element w drugiej kolumnie */
+            grid-row: 4;
+        }
+
+        .box13 {
+            grid-column: 2; /* Umieszcza element w trzeciej kolumnie */
+            grid-row: 4;
+        }
+
+        .box14 {
+            grid-column: 1; /* Umieszcza element w czwartej kolumnie */
+            grid-row: 5;
+        }
+
+        .box15 {
+            grid-column: 2; /* Umieszcza element w piątej kolumnie */
+            grid-row: 5;
+        }
+
+        }
+
         @media screen and (max-width: 600px) {
             body {
                 display: block; /* Wyłącza układ grid dla body na małych ekranach */
@@ -76,7 +140,6 @@
                 display: block; /* Wyłącza układ grid dla content na małych ekranach */
             }
         }
-       
     </style>
 </head>
 <body>
@@ -90,11 +153,11 @@
         <div class="box box3">Div 3</div>
         <div class="box box4">Div 4</div>
         <div class="box box5">Div 5</div>
-        <div class="box boxR2 box1">Div 1</div>
-        <div class="box boxR2 box2">Div 2</div>
-        <div class="box boxR2 box3">Div 3</div>
-        <div class="box boxR2 box4">Div 4</div>
-        <div class="box boxR2 box5">Div 5</div>
+        <div class="box box11">Div 1</div>
+        <div class="box box12">Div 2</div>
+        <div class="box box13">Div 3</div>
+        <div class="box box14">Div 4</div>
+        <div class="box box15">Div 5</div>
     </div>
     <div id="foot">
         RS2025
